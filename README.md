@@ -1,5 +1,5 @@
 # TheVault
-#### Overview
+#### Synopsis
 Simulates working of vault.<br />
 Receives form-data from user by api or via root routing html file.<br />
 Encrypts it and stores in volatile(Redis) or permanent(file) storage, after succes storing user will receive encryption key.
