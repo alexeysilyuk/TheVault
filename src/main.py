@@ -124,12 +124,6 @@ class Vault():
 
 app = FastAPI()
 
-templates = Jinja2Templates(directory="html")
-@app.get("/", response_class=HTMLResponse)
-def root(request: Request):
-    return templates.TemplateResponse("index.html",{'request':request})
-
-
 @app.post("/api/encrypt",status_code=status.HTTP_400_BAD_REQUEST)
 async def encrypt_api(storeType: str, data: str = Form(...)):
 
