@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Vault</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+<h1>The Vault</h1>
+<h2>Let's put your data</h2>
+<form action="/api/encrypt?storeType=" method="post" enctype="multipart/form-data" onsubmit="this.action = this.action + this.storeType.value; this.submit();">
+   <select name="storeType" id="storeType">
+      <option value="persistent">persistent</option>
+      <option value="volatile">volatile</option>
+  </select>
+
+  <input type="text" name="data" multiple>
+  <input type="submit" value="Encrypt">
+</form>
+<br>
+<br>
+<h2>Let's get your data</h2>
+<form action="/api/decrypt?keyName=" method="get" enctype="multipart/form-data" onsubmit="this.action = this.action + this.keyName; this.submit();">
+  <input type="text" name="keyName" multiple>
+  <input type="submit" value="Decrypt">
+</form>
+
+</body>
+</html>

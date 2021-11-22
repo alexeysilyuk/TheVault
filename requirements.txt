@@ -1,0 +1,7 @@
+fastapi==0.70.0
+redis==4.0.1
+uvicorn==0.15.0
+python-multipart==0.0.5
+python-dotenv==0.19.2
+cryptography==36.0.0
+Jinja2==3.0.3
